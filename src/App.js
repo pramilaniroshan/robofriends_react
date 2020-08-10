@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Cardlist from './cardlist';
 import SearchBox from './searchbox';
+import Scroll from './Scroll';
 import './App.css';
-import LoadingBar from 'react-top-loading-bar';
+
 
 
 
@@ -64,8 +65,11 @@ componentDidMount=()=>{
 
             <div className="tc">
                 <h1 className='f1'>Robo Friends</h1>
+
                 <SearchBox SearchChange={this.OnSearchChange}/>
+                <Scroll>
                 <Cardlist robo={filterdrobots} />
+                </Scroll>
             </div>
             );
     }
